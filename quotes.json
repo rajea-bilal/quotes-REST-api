@@ -2,31 +2,79 @@
   {
     "id": "0",
     "quote": "You have power over your mind — not outside events. Realize this, and you will find strength.",
-    "author": "Marcus Aurelius"
+    "author": "Marcus Aurelius",
+    "category": "self-help"
   },
   {
     "id": "1",
     "quote": "The happiness of your life depends upon the quality of your thoughts.",
-    "author": "Marcus Aurelius."
+    "author": "Marcus Aurelius.",
+    "category": "self-help"
   },
   {
     "id": "2",
     "quote": "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
-    "author": "Marcus Aurelius"
+    "author": "Marcus Aurelius",
+    "category": "self-help"
   },
   {
     "id": "3",
     "quote": "Waste no more time arguing about what a good man should be. Be one.",
-    "author": "Marcus Aurelius"
+    "author": "Marcus Aurelius",
+    "category": "self-help"
   },
   {
     "id": "4",
     "quote": "When you arise in the morning think of what a privilege it is to be alive, to think, to enjoy, to love…",
-    "author": "Marcus Aurelius"
+    "author": "Marcus Aurelius",
+    "category": "self-help"
   },
   {
     "id": "5",
     "quote": "The soul becomes dyed with the color of its thoughts.",
-    "author": "Marcus Aurelius"
+    "author": "Marcus Aurelius",
+    "category": "self-help"
+  },
+  {
+    "id": "7773a862-fa23-4c67-b3b1-0e33fe17f747",
+    "quote": "You should be far more concerned with your current trajectory than with your current results.",
+    "author": "James Clear",
+    "category": "self-help"
+  },
+  {
+    "id": "83019da2-0666-436d-b859-6c81f0f4ea14",
+    "quote": "When you fall in love with the process rather than the product, you don’t have to wait to give yourself permission to be happy. You can be satisfied anytime your system is running.",
+    "author": "James Clear",
+    "category": "self-help"
+  },
+  {
+    "id": "0cc7b2eb-4b84-4e8e-a591-2c5f1895a757",
+    "quote": "Habits are the compound interest of self-improvement",
+    "author": "James Clear",
+    "category": "Self-help"
+  },
+  {
+    "id": "6eed2b42-3d45-48d1-933b-b91e14ce919f",
+    "quote": "The more pride you have in a particular aspect of your identity, the more motivated you will be to maintain the habits associated with it. If you’re proud of how your hair looks, you’ll develop all sorts of habits to care for and maintain it. If you’re proud of the size of your biceps, you’ll make sure you never skip an upper-body workout. If you’re proud of the scarves you knit, you’ll be more likely to spend hours knitting each week. Once your pride gets involved, you’ll fight tooth and nail to maintain your habits.",
+    "author": "James Clear",
+    "category": "self-help"
+  },
+  {
+    "id": "c2385aa3-bd1a-40c8-a403-7a4fd1011e5a",
+    "quote": "Professionals stick to the schedule;\namateurs let life get in the way.",
+    "author": "James Clear",
+    "category": "self-help"
+  },
+  {
+    "id": "c83ff958-b2d8-4087-8fcc-8a8ebb733c00",
+    "quote": "Choose not to be harmed — and you won’t feel harmed. Don’t feel harmed — and you haven’t been.",
+    "author": "Marcus Aurelius",
+    "category": "Life"
+  },
+  {
+    "id": "aa148714-0cda-449d-9b4a-1fd09fffc88c",
+    "quote": "No person has the power to have everything they want, but it is in their power not to want what they don’t have, and to cheerfully put to good use what they do have",
+    "author": "Seneca",
+    "category": "self-help"
   }
 ]

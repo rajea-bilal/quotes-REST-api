@@ -12,6 +12,18 @@ export async function getQuotes() {
   return quotesJS;
 }
 
+// GET random quotes
+export async function getRandomQuote() {
+  const quotesJSON = await fs.readFile("quotes.json", "utf-8")
+  const quotesJS = JSON.parse(quotesJSON)
+
+  // find random quotes
+  const randomIndex = Math.floor(Math.random() * quotesJS.length)
+  const randomQuote = quotesJS[randomIndex]
+  // console.log(randomQuote)
+  return randomQuote
+}
+
 // GET(id)
 export async function getQuoteById(id) {
   console.log(typeof id);
@@ -28,6 +40,22 @@ export async function getQuoteById(id) {
   return null;
 }
 
+// GET based on query params
+export async function getQuoteByParams(value) {
+    console.log(value);
+  const quotesJSON = await fs.readFile("quotes.json", "utf-8");
+  const quotesJS = JSON.parse(quotesJSON);
+
+  // looping through the array to find the quote that matches id
+  for (let quote of quotesJS) {
+    if ((quote.quote.includes(value)) || (quote.author.includes(value)) || (quote.category.includes(value))) {
+      console.log(quote)
+      return quote;
+    }
+  }
+
+  return null;
+}
 // POST
 export async function postQuote(quoteObject) {
   const quotesJSON = await fs.readFile("quotes.json", "utf-8");
@@ -36,7 +64,7 @@ export async function postQuote(quoteObject) {
   // creating a new book object
   const quote = {
     id: uuidv4(),
-    title: quoteObject.title,
+    quote: quoteObject.quote,
     author: quoteObject.author,
     category: quoteObject.category,
   };
@@ -94,3 +122,5 @@ const quoteObj = {
   author: "Napolina",
   category: "Struggling alot!!!",
 };
+
+// await getQuoteByParams("self")

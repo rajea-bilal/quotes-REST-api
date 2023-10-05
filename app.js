@@ -1,19 +1,24 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors"
 const app = express();
 const PORT = 5000;
 
 import {
   getQuotes,
   getQuoteById,
+  getRandomQuote,
+  getQuoteByParams,
   postQuote,
   editQuoteById,
   deleteQuoteById,
 } from "./helperFunctions.js";
 
+// middleware
+app.use(cors())
 app.use(express.json());
-
 app.use(morgan("tiny"));
+
 
 // GET Quotes
 app.get("/quotes", async function (req, res) {
@@ -54,6 +59,41 @@ app.get("/quotes/:id", async function (req, res) {
   }
 });
 
+// GET random quotes
+app.get("/random-quote", async function (req, res) {
+  try {
+    const randomQuote = await getRandomQuote();
+    // console.log(randomQuote)
+    if (!randomQuote) {
+      throw new Error();
+    }
+
+    res.status(200).json(randomQuote);
+  } catch (error) {
+    res.status(400).send("No quote found. :( ");
+  }
+});
+
+// GET quote by params
+app.get("/quotes/search", async function(req, res) {
+  try {
+    const query = req.query.q
+    console.log(query)
+
+    const findQuote = await getQuoteByParams(query)
+
+     if (!findQuote) {
+      throw new Error();
+    }
+
+    res.status(201).json(findQuote);
+
+  } catch(error) {
+    res.status(400).send("No quote found. :( ");
+  }
+})
+
+
 // POST
 app.post("/quotes", async function (req, res) {
   try {
@@ -64,6 +104,7 @@ app.post("/quotes", async function (req, res) {
     }
 
     const quote = req.body;
+    console.log(quote)
     const createdQuote = await postQuote(quote);
 
     if (!createdQuote) {
